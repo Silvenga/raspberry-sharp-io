@@ -5,9 +5,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Raspberry.System" Version="2.1" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Raspberry.IO.GeneralPurpose\Raspberry.IO.GeneralPurpose.csproj" />
   </ItemGroup>
   <ItemGroup>
