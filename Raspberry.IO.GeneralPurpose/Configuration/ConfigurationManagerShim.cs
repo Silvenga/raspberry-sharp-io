@@ -13,7 +13,7 @@ namespace Raspberry.IO.GeneralPurpose.Configuration
 #if NETSTANDARD2_0
         public static object GetSection(string sectionName)
         {
-            throw new NotImplementedException();
+            return GlobalConfiguration.GetConnectionConfiguration();
         }
 #endif
     }
