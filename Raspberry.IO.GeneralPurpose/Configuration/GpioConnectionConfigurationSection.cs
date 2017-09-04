@@ -4,22 +4,14 @@ using System.Configuration;
 
 #endregion
 
+#if NET40
 namespace Raspberry.IO.GeneralPurpose.Configuration
 {
     /// <summary>
     /// Represents the configuration of the GPIO connection.
     /// </summary>
-    public class GpioConnectionConfigurationSection : ConfigurationSection
+    public class GpioConnectionConfigurationSection : ConfigurationSection, IGpioConnectionConfiguration
     {
-        #region Constants
-
-        /// <summary>
-        /// The default poll interval, in milliseconds.
-        /// </summary>
-        public const decimal DefaultPollInterval = 50.0m;
-
-        #endregion
-
         #region Properties
 
         /// <summary>
@@ -31,7 +23,7 @@ namespace Raspberry.IO.GeneralPurpose.Configuration
         [ConfigurationProperty("driver")]
         public string DriverTypeName
         {
-            get { return (string) this["driver"]; }
+            get { return (string)this["driver"]; }
             set { this["driver"] = value; }
         }
 
@@ -68,3 +60,4 @@ namespace Raspberry.IO.GeneralPurpose.Configuration
         #endregion
     }
 }
+#endif
